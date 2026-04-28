@@ -1,0 +1,5 @@
+com.example.budgettracker.test.app-core-1.6.1-0 C:\Users\clive\.gradle\caches\8.9\transforms\cee2e795842e9ff3647376b28852a282\transformed\core-1.6.1\res
+com.example.budgettracker.test.app-androidTest-1 C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\build\generated\res\resValues\androidTest\debug
+com.example.budgettracker.test.app-mergeDebugAndroidTestResources-2 C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.budgettracker.test.app-mergeDebugAndroidTestResources-3 C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.budgettracker.test.app-debugAndroidTest-4 C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

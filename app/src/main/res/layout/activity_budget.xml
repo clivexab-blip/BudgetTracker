@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true"> <LinearLayout
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    android:background="#1E442F"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/ivBack"
+        android:src="@android:drawable/ic_media_previous"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:tint="#BBF0AE"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+    <TextView
+        android:text="Budget &amp; Goals"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#BBF0AE"
+        android:layout_marginStart="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#1E442F"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Total Spent This Month"
+                        android:textColor="#BBF0AE"
+                        android:textSize="13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvTotalSpent"
+                        android:text="ZAR 0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvGoalStatus"
+                        android:text="Set goals below to track progress"
+                        android:textColor="#AAAAAA"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressOverall"
+                        android:progress="0"
+                        app:indicatorColor="#BBF0AE"
+                        app:trackColor="#33FFFFFF"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:text="Minimum goal (ZAR)" android:textSize="12sp" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/etMinGoal"
+                        android:hint="e.g. 500.00"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:background="#F0F0F0"
+                        android:layout_marginBottom="12dp"
+                        android:minHeight="48dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Maximum goal (ZAR)" android:textSize="12sp" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/etMaxGoal"
+                        android:hint="e.g. 5000.00"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:background="#F0F0F0"
+                        android:layout_marginBottom="16dp"
+                        android:minHeight="48dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:id="@+id/btnSaveGoals"
+                        android:text="Save Goals"
+                        android:backgroundTint="#1E442F"
+                        android:textColor="#BBF0AE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:text="Category" android:textSize="12sp" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/spinnerBudgetCategory"
+                        android:background="#F0F0F0"
+                        android:layout_marginBottom="12dp"
+                        android:minHeight="48dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Monthly limit (ZAR)" android:textSize="12sp" android:layout_marginBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/etBudgetLimit"
+                        android:hint="e.g. 1500.00"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:background="#F0F0F0"
+                        android:layout_marginBottom="16dp"
+                        android:minHeight="48dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:id="@+id/btnSaveBudget"
+                        android:text="Set Budget Limit"
+                        android:backgroundTint="#1E442F"
+                        android:textColor="#BBF0AE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:text="Spending by Category"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/llCategoryBreakdown"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="40dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

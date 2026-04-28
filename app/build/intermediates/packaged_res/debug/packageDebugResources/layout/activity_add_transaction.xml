@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:background="#1E442F"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:tint="#BBF0AE" />
+        <TextView
+            android:text="Add Transaction"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#BBF0AE"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:text="Transaction Name" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etTransactionName"
+                android:hint="e.g. Groceries, Salary..." android:padding="12dp"
+                android:background="#FFFFFF" android:layout_marginBottom="15dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Amount (ZAR)" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAmount" android:hint="0.00"
+                android:padding="12dp" android:inputType="numberDecimal"
+                android:background="#FFFFFF" android:layout_marginBottom="15dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Date" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDate" android:hint="Tap to select date"
+                android:padding="12dp" android:focusable="false"
+                android:background="#FFFFFF" android:layout_marginBottom="15dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Type" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Spinner android:id="@+id/spinnerType" android:padding="12dp"
+                android:background="#FFFFFF" android:layout_marginBottom="15dp"
+                android:layout_width="match_parent" android:layout_height="48dp"/>
+
+            <TextView android:text="Category" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Spinner android:id="@+id/spinnerCategory" android:padding="12dp"
+                android:background="#FFFFFF" android:layout_marginBottom="20dp"
+                android:layout_width="match_parent" android:layout_height="48dp"/>
+
+            <TextView android:text="Receipt / Photo (optional)" android:textColor="#333333"
+                android:textStyle="bold" android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <!-- Preview of selected image — hidden until user picks one -->
+            <ImageView android:id="@+id/ivReceiptPreview"
+                android:layout_width="match_parent" android:layout_height="180dp"
+                android:scaleType="centerCrop" android:background="#E0E0E0"
+                android:visibility="gone" android:layout_marginBottom="8dp"/>
+
+            <TextView android:id="@+id/tvImageStatus"
+                android:text="No image selected" android:textColor="#888888"
+                android:textSize="13sp" android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/btnPickImage"
+                android:text="📷  Choose Image"
+                android:backgroundTint="#E8F5E9" android:textColor="#1E442F"
+                android:textStyle="bold" android:layout_marginBottom="20dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <!-- Spinner shown while uploading image to Firebase Storage -->
+            <ProgressBar android:id="@+id/progressBar"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" android:layout_marginBottom="10dp"/>
+
+            <Button android:id="@+id/btnSaveTransaction"
+                android:text="Save Transaction"
+                android:backgroundTint="#1E442F" android:textColor="#BBF0AE"
+                android:textStyle="bold"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411952049630",
+    "project_id": "bugettracker-13119",
+    "storage_bucket": "bugettracker-13119.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411952049630:android:f7f8226e0854a039fdc14f",
+        "android_client_info": {
+          "package_name": "com.example.budgettracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWyf0whaWQ_ZEGpPn7rCuOQINIoNDZv5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

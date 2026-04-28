@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.budgettracker.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-28T12:27:04" hostname="THEEAFRICAN" time="0.008">
+  <properties/>
+  <testcase name="balance_onlyExpenses_isNegative" classname="com.example.budgettracker.ExampleUnitTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

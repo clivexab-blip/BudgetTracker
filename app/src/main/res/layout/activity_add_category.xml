@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true"> <LinearLayout
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    android:background="#1E442F"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:src="@android:drawable/ic_media_previous"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#BBF0AE" />
+
+    <TextView
+        android:text="Add Category"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#BBF0AE"
+        android:layout_marginStart="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Category Name"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etCategoryName"
+            android:hint="e.g. Groceries, Transport..."
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:minHeight="52dp"
+            android:layout_marginBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSaveCategory"
+            android:text="Save Category"
+            android:backgroundTint="#1E442F"
+            android:textColor="#BBF0AE"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent_color">#BBF0AE</color>
+    <color name="background_color">#1E442F</color>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">BudgetTracker</string>
+    <string name="gcm_defaultSenderId" translatable="false">411952049630</string>
+    <string name="google_api_key" translatable="false">AIzaSyBWyf0whaWQ_ZEGpPn7rCuOQINIoNDZv5Y</string>
+    <string name="google_app_id" translatable="false">1:411952049630:android:f7f8226e0854a039fdc14f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBWyf0whaWQ_ZEGpPn7rCuOQINIoNDZv5Y</string>
+    <string name="google_storage_bucket" translatable="false">bugettracker-13119.firebasestorage.app</string>
+    <string name="project_id" translatable="false">bugettracker-13119</string>
+    <style name="Base.Theme.BudgetTracker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/background_color</item>
+        <item name="colorPrimaryVariant">@color/background_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" ns1:targetApi="l">@color/background_color</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.BudgetTracker" parent="Base.Theme.BudgetTracker"/>
+</resources>

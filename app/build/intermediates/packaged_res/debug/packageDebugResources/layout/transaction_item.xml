@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Main row: icon/thumbnail + details + amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Receipt thumbnail — only visible when a receipt image exists -->
+            <ImageView
+                android:id="@+id/ivReceiptThumb"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:scaleType="centerCrop"
+                android:background="#F0F0F0"
+                android:visibility="gone"
+                android:layout_marginEnd="12dp"/>
+
+            <!-- Emoji icon — visible when there is NO image -->
+            <TextView
+                android:id="@+id/tvCategoryIcon"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:text="💳"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:background="#F0F0F0"
+                android:layout_marginEnd="12dp"/>
+
+            <!-- Transaction name, category, date -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Name"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/darker_gray"/>
+            </LinearLayout>
+
+            <!-- Amount: green for income, red for expense -->
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-ZAR0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"/>
+        </LinearLayout>
+
+        <!-- View Receipt button — only visible when a receipt image exists -->
+        <Button
+            android:id="@+id/btnViewReceipt"
+            android:text="📷  View Receipt"
+            android:textSize="12sp"
+            android:textColor="#1E442F"
+            android:backgroundTint="#E8F5E9"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="36dp"
+            android:layout_width="match_parent"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
