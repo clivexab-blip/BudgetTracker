@@ -1,4 +1,8 @@
-BudgetTracker 💸
+BudgetTracker 
+
+LINK TO VIDEO 
+https://youtu.be/F6c41kGFxFc?feature=shared
+
 A comprehensive, gamified personal finance tracker designed to help users take control of their spending through visual analytics and achievement-based milestones. Built with Kotlin and powered by Firebase.
 
 Changes Made from Part 2
