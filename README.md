@@ -1,16 +1,20 @@
-BudgetTracker 
-
+BudgetTracker 💸
 A comprehensive, gamified personal finance tracker designed to help users take control of their spending through visual analytics and achievement-based milestones. Built with Kotlin and powered by Firebase.
 
-changes made from Part 2
-implement the menu to all pages rather then having it in the main page and the other pages having back icon so all the pages have bottom menn
-removing back icon
-implemetning log out at the top 
-implementing charts and statics that went there at part 2 
-having figures in the category spending then only having progress bar 
-being able to delete category 
-adding scrollable views to the rest of the app pages 
+Changes Made from Part 2
+Global Navigation Implementation: Added the shared bottom navigation menu across all application screens instead of restricting it to the main dashboard.
 
+Streamlined Layout Actions: Removed standard back icon headers across secondary screens to embrace seamless global menu transitions.
+
+Quick Account Session Management: Integrated a dedicated log out button layout asset directly at the top header area of the main user interface.
+
+Advanced Graphic UI Components: Deployed visual data modules including a custom PieChartView and BarChartView that were absent in prior iterations.
+
+Upgraded Category Analytics: Enhanced the category spending rows to present real-time numerical figures alongside the existing progress bars.
+
+Dynamic Data Mutation: Implemented secure database nodes and UI triggers allowing users to directly delete transaction categories.
+
+Infinite Viewport Enhancements: Wrapped layout groups inside dedicated scrollable views (NestedScrollView) across remaining application files to avoid container clipping.
 
 Features
 User Authentication: Secure registration and login powered by Firebase Auth (Email/Password).
@@ -54,7 +58,7 @@ Add an Android app to your project with the package name: com.example.budgettrac
 
 Download the generated google-services.json file.
 
-Place it inside your project's /app` directory, replacing the placeholder file.
+Place it inside your project's /app directory, replacing the placeholder file.
 
 2. Android Studio Implementation
 Clone/Open: Open Android Studio and select the root BudgetTracker folder.
@@ -64,29 +68,50 @@ Sync: Wait for Gradle to build and download all dependencies completely.
 Run: Launch the application on an Android Emulator or physical test device (API Level 25+).
 
 Project Structure
-Plaintext
-app/src/main/java/com/example/budgettracker/
-├── adapter/             # RecyclerView adapters for lists
-│   └── TransactionAdapter.kt
-├── model/               # Data transfer objects & data classes
-│   ├── Budget.kt
-│   ├── Category.kt
-│   ├── Rewards.kt
-│   ├── Transactions.kt
-│   └── User.kt
-├── ui/                  # Application Controller & Core Activities
-│   ├── AddCategoryActivity.kt
-│   ├── AddTransactionActivity.kt       # Includes image/receipt attachments
-│   ├── AnalyticsDashboardActivity.kt  # Charts & badge scoring logic
-│   ├── BudgetActivity.kt
-│   ├── LoginActivity.kt
-│   ├── MainActivity.kt
-│   ├── RegisterActivity.kt
-│   ├── SplashActivity.kt
-│   └── TransactionHistoryActivity.kt
-└── views/               # Custom Native UI Drawing Canvas Components
-    ├── BarChartView.kt
-    └── PieChartView.kt
+The files within the main application package (app/src/main/java/com/example/budgettracker/) are organized into the following direct modules:
+
+adapter
+
+TransactionAdapter.kt: Handles list binding and formatting for user transaction records.
+
+model
+
+Budget.kt: Data template holding active budget limits.
+
+Category.kt: Data structure governing transaction tracking categories.
+
+Rewards.kt: Architectural model managing user achievement states.
+
+Transactions.kt: Standard schema structure containing operational record details.
+
+User.kt: Identity structure mapping user attributes.
+
+ui
+
+AddCategoryActivity.kt: Form viewport built to create personalized spending labels.
+
+AddTransactionActivity.kt: Main screen supporting ledger entries with support for file attachments.
+
+AnalyticsDashboardActivity.kt: Core processing activity for visual metrics and user milestone assignments.
+
+BudgetActivity.kt: Operational limits management dashboard.
+
+LoginActivity.kt: Secure authentication entry screen.
+
+MainActivity.kt: Central interaction landing dashboard.
+
+RegisterActivity.kt: Account setup execution flow.
+
+SplashActivity.kt: Initialization launch layout view.
+
+TransactionHistoryActivity.kt: Chronological timeline ledger displaying logged items.
+
+views
+
+BarChartView.kt: Custom continuous engine handling vertical column drawing calculations.
+
+PieChartView.kt: Specialized canvas controller managing multi-category angular distribution displays.
+
 Firebase Database Schema
 JSON
 {
