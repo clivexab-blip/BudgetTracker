@@ -41,6 +41,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetTracker" >
         <activity
+            android:name="com.example.budgettracker.AnalyticsDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.budgettracker.ViewReceiptActivity"
             android:exported="false" />
         <activity

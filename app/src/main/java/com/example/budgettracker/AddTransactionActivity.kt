@@ -1,6 +1,7 @@
 package com.example.budgettracker
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -70,12 +71,32 @@ class AddTransactionActivity : AppCompatActivity() {
             imagePickerLauncher.launch("image/*")
         }
         btnSave.setOnClickListener { saveTransaction() }
-        findViewById<ImageView>(R.id.ivBack).setOnClickListener { finish() }
+
 
         loadCategories()
+        setupBottomNav()
     }
+    private fun setupBottomNav() {
+        findViewById<LinearLayout>(R.id.btnNavHome).setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
-    private fun showDatePicker() {
+        findViewById<LinearLayout>(R.id.btnNavCategory).setOnClickListener {
+            startActivity(Intent(this, AddCategoryActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.btnNavBudget).setOnClickListener {
+            startActivity(Intent(this, BudgetActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.btnNavHistory).setOnClickListener {
+            startActivity(Intent(this, TransactionHistoryActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.btnNavAnalytics).setOnClickListener {
+            startActivity(Intent(this, AnalyticsDashboardActivity::class.java))
+        }
+
+    }
+        private fun showDatePicker() {
         val cal = Calendar.getInstance()
         DatePickerDialog(this, { _, y, m, d ->
             etDate.setText(String.format("%02d/%02d/%04d", d, m + 1, y))

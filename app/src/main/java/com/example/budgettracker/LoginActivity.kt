@@ -53,8 +53,15 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
-                    Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    val message = when {
+                        task.exception?.message?.contains("password") == true -> "Incorrect password. Please try again."
+                        task.exception?.message?.contains("no user") == true -> "No account found with this email."
+                        task.exception?.message?.contains("blocked") == true -> "Too many attempts. Try again later."
+                        else -> "Login failed. Please check your email or password."
+                    }
+                    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
                 }
             }
     }
 }
+

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:text="Analytics"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E442F"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#EB2718"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Total Spent"
+                            android:textColor="#FFCCCC"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvTotalSpentAnalytics"
+                            android:text="ZAR 0.00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#4CAF50"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Total Income"
+                            android:textColor="#CCFFCC"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvTotalIncomeAnalytics"
+                            android:text="ZAR 0.00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#1E442F"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Logged"
+                            android:textColor="#BBF0AE"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvTransactionCount"
+                            android:text="0 transactions"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvBadgeIcon"
+                        android:text="🏅"
+                        android:textSize="48sp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tvBadgeTitle"
+                            android:text="No Badge Yet"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#888888"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvBadgeDesc"
+                            android:text="Add your first transaction to earn your Bronze badge!"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:text="Spending by Category"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E442F"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerPieMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#1E442F"
+                            android:spinnerMode="dropdown"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+                        <TextView
+                            android:id="@+id/tvPieMinGoal"
+                            android:text="Min Target: ZAR 0.00"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#FB8C00"
+                            android:background="#FFF3E0"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvPieMaxGoal"
+                            android:text="Max Budget: ZAR 0.00"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#EB2718"
+                            android:background="#FFEBEE"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <com.example.budgettracker.PieChartView
+                        android:id="@+id/pieChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llLegend"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="ADDED INNOVATIVE FEATURES"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E442F"
+                        android:layout_marginBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp">
+                        <TextView
+                            android:text="1. PREDICT SPENDING INSIGHTS"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvPredictiveInsight"
+                            android:text="Calculating trajectory projections..."
+                            android:textSize="13sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp">
+                        <TextView
+                            android:text="2. SMART SAVING RECOMMENDATIONS"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvSmartRecommendation"
+                            android:text="Analyzing spending behavior for advice..."
+                            android:textSize="13sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="3. DAILY SPENDING LIMIT SUGGESTION"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tvDailySpendingLimit"
+                            android:text="Calculating your daily target allowance..."
+                            android:textSize="13sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:text="Monthly Performance"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#1E442F"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerBarMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#1E442F"
+                            android:spinnerMode="dropdown"/>
+                    </LinearLayout>
+
+                    <com.example.budgettracker.BarChartView
+                        android:id="@+id/barChartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/llBarLegend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#1E442F">
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5">
+            <LinearLayout
+                android:id="@+id/btnNavHome"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="🏠" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Home" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNavCategory"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="🏷️" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Category" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNavAdd"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#BBF0AE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="➕" android:textSize="22sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Add" android:textStyle="bold" android:textColor="#1E442F" android:textSize="10sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNavBudget"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📊" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Budget" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNavHistory"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📋" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="History" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

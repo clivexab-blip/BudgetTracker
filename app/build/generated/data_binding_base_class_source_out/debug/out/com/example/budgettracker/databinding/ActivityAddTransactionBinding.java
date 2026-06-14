@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.budgettracker.R;
@@ -23,6 +24,27 @@ import java.lang.String;
 public final class ActivityAddTransactionBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
+
+  @NonNull
+  public final LinearLayout bottomNav;
+
+  @NonNull
+  public final CardView bottomNavContainer;
+
+  @NonNull
+  public final LinearLayout btnNavAnalytics;
+
+  @NonNull
+  public final LinearLayout btnNavBudget;
+
+  @NonNull
+  public final LinearLayout btnNavCategory;
+
+  @NonNull
+  public final LinearLayout btnNavHistory;
+
+  @NonNull
+  public final LinearLayout btnNavHome;
 
   @NonNull
   public final Button btnPickImage;
@@ -40,9 +62,6 @@ public final class ActivityAddTransactionBinding implements ViewBinding {
   public final EditText etTransactionName;
 
   @NonNull
-  public final ImageView ivBack;
-
-  @NonNull
   public final ImageView ivReceiptPreview;
 
   @NonNull
@@ -58,18 +77,27 @@ public final class ActivityAddTransactionBinding implements ViewBinding {
   public final TextView tvImageStatus;
 
   private ActivityAddTransactionBinding(@NonNull LinearLayout rootView,
-      @NonNull Button btnPickImage, @NonNull Button btnSaveTransaction, @NonNull EditText etAmount,
-      @NonNull EditText etDate, @NonNull EditText etTransactionName, @NonNull ImageView ivBack,
-      @NonNull ImageView ivReceiptPreview, @NonNull ProgressBar progressBar,
-      @NonNull Spinner spinnerCategory, @NonNull Spinner spinnerType,
-      @NonNull TextView tvImageStatus) {
+      @NonNull LinearLayout bottomNav, @NonNull CardView bottomNavContainer,
+      @NonNull LinearLayout btnNavAnalytics, @NonNull LinearLayout btnNavBudget,
+      @NonNull LinearLayout btnNavCategory, @NonNull LinearLayout btnNavHistory,
+      @NonNull LinearLayout btnNavHome, @NonNull Button btnPickImage,
+      @NonNull Button btnSaveTransaction, @NonNull EditText etAmount, @NonNull EditText etDate,
+      @NonNull EditText etTransactionName, @NonNull ImageView ivReceiptPreview,
+      @NonNull ProgressBar progressBar, @NonNull Spinner spinnerCategory,
+      @NonNull Spinner spinnerType, @NonNull TextView tvImageStatus) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
+    this.bottomNavContainer = bottomNavContainer;
+    this.btnNavAnalytics = btnNavAnalytics;
+    this.btnNavBudget = btnNavBudget;
+    this.btnNavCategory = btnNavCategory;
+    this.btnNavHistory = btnNavHistory;
+    this.btnNavHome = btnNavHome;
     this.btnPickImage = btnPickImage;
     this.btnSaveTransaction = btnSaveTransaction;
     this.etAmount = etAmount;
     this.etDate = etDate;
     this.etTransactionName = etTransactionName;
-    this.ivBack = ivBack;
     this.ivReceiptPreview = ivReceiptPreview;
     this.progressBar = progressBar;
     this.spinnerCategory = spinnerCategory;
@@ -104,6 +132,48 @@ public final class ActivityAddTransactionBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomNav;
+      LinearLayout bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavContainer;
+      CardView bottomNavContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAnalytics;
+      LinearLayout btnNavAnalytics = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAnalytics == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavBudget;
+      LinearLayout btnNavBudget = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavBudget == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavCategory;
+      LinearLayout btnNavCategory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHistory;
+      LinearLayout btnNavHistory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHome;
+      LinearLayout btnNavHome = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHome == null) {
+        break missingId;
+      }
+
       id = R.id.btnPickImage;
       Button btnPickImage = ViewBindings.findChildViewById(rootView, id);
       if (btnPickImage == null) {
@@ -131,12 +201,6 @@ public final class ActivityAddTransactionBinding implements ViewBinding {
       id = R.id.etTransactionName;
       EditText etTransactionName = ViewBindings.findChildViewById(rootView, id);
       if (etTransactionName == null) {
-        break missingId;
-      }
-
-      id = R.id.ivBack;
-      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
-      if (ivBack == null) {
         break missingId;
       }
 
@@ -170,9 +234,10 @@ public final class ActivityAddTransactionBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAddTransactionBinding((LinearLayout) rootView, btnPickImage,
-          btnSaveTransaction, etAmount, etDate, etTransactionName, ivBack, ivReceiptPreview,
-          progressBar, spinnerCategory, spinnerType, tvImageStatus);
+      return new ActivityAddTransactionBinding((LinearLayout) rootView, bottomNav,
+          bottomNavContainer, btnNavAnalytics, btnNavBudget, btnNavCategory, btnNavHistory,
+          btnNavHome, btnPickImage, btnSaveTransaction, etAmount, etDate, etTransactionName,
+          ivReceiptPreview, progressBar, spinnerCategory, spinnerType, tvImageStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -193,6 +193,12 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\clive\.gradle\c
 		ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:19:9-51
 	android:dataExtractionRules
 		ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:13:9-65
+activity#com.example.budgettracker.AnalyticsDashboardActivity
+ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:21:9-89
+	android:exported
+		ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:21:62-86
+	android:name
+		ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:21:19-61
 activity#com.example.budgettracker.ViewReceiptActivity
 ADDED from C:\Users\clive\AndroidStudioProjects\BudgetTracker\app\src\main\AndroidManifest.xml:22:9-89
 	android:exported

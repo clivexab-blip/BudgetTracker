@@ -8,10 +8,6 @@
         "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\transaction_item.xml"
     },
     {
-        "merged": "com.example.budgettracker.app-mergeDebugResources-47:/layout/activity_main.xml",
-        "source": "com.example.budgettracker.app-main-50:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-mergeDebugResources-47:\\layout\\activity_budget.xml",
         "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\activity_budget.xml"
     },
@@ -28,12 +24,24 @@
         "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\item_budget_category.xml"
     },
     {
+        "merged": "com.example.budgettracker.app-mergeDebugResources-47:/layout/activity_login.xml",
+        "source": "com.example.budgettracker.app-main-50:/layout/activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-mergeDebugResources-47:\\layout\\activity_register.xml",
         "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\activity_register.xml"
     },
     {
+        "merged": "com.example.budgettracker.app-mergeDebugResources-47:/layout/activity_register.xml",
+        "source": "com.example.budgettracker.app-main-50:/layout/activity_register.xml"
+    },
+    {
         "merged": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-mergeDebugResources-47:\\layout\\activity_transaction_history.xml",
         "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\activity_transaction_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-mergeDebugResources-47:\\layout\\activity_analytics_dashboard.xml",
+        "source": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-main-50:\\layout\\activity_analytics_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\clive\\.gradle\\daemon\\8.9\\com.example.budgettracker.app-mergeDebugResources-47:\\layout\\activity_add_transaction.xml",

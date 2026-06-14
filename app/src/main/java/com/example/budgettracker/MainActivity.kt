@@ -58,9 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // ── Bottom navigation ──────────────────────────────
-        findViewById<LinearLayout>(R.id.btnNavHome).setOnClickListener {
-            // already on home
-        }
+
         findViewById<LinearLayout>(R.id.btnNavAdd).setOnClickListener {
             startActivity(Intent(this, AddTransactionActivity::class.java))
         }
@@ -70,8 +68,15 @@ class MainActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.btnNavBudget).setOnClickListener {
             startActivity(Intent(this, BudgetActivity::class.java))
         }
+
         findViewById<LinearLayout>(R.id.btnNavHistory).setOnClickListener {
             startActivity(Intent(this, TransactionHistoryActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.btnNavAnalytics).setOnClickListener {
+            startActivity(Intent(this, AnalyticsDashboardActivity::class.java))
+        }
+        findViewById<LinearLayout>(R.id.btnNavAnalytics).setOnClickListener {
+            startActivity(Intent(this, AnalyticsDashboardActivity::class.java))
         }
     }
 

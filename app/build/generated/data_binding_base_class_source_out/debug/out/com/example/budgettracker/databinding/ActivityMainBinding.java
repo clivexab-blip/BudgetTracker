@@ -32,6 +32,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout btnNavAdd;
 
   @NonNull
+  public final LinearLayout btnNavAnalytics;
+
+  @NonNull
   public final LinearLayout btnNavBudget;
 
   @NonNull
@@ -39,9 +42,6 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout btnNavHistory;
-
-  @NonNull
-  public final LinearLayout btnNavHome;
 
   @NonNull
   public final RecyclerView rvTransaction;
@@ -69,8 +69,8 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull LinearLayout bottomNav,
       @NonNull CardView bottomNavContainer, @NonNull LinearLayout btnNavAdd,
-      @NonNull LinearLayout btnNavBudget, @NonNull LinearLayout btnNavCategory,
-      @NonNull LinearLayout btnNavHistory, @NonNull LinearLayout btnNavHome,
+      @NonNull LinearLayout btnNavAnalytics, @NonNull LinearLayout btnNavBudget,
+      @NonNull LinearLayout btnNavCategory, @NonNull LinearLayout btnNavHistory,
       @NonNull RecyclerView rvTransaction, @NonNull TextView tvExpenses,
       @NonNull TextView tvGreeting, @NonNull TextView tvIncome, @NonNull TextView tvLogout,
       @NonNull TextView tvTotalBalance, @NonNull TextView tvUserName, @NonNull TextView tvViewAll) {
@@ -78,10 +78,10 @@ public final class ActivityMainBinding implements ViewBinding {
     this.bottomNav = bottomNav;
     this.bottomNavContainer = bottomNavContainer;
     this.btnNavAdd = btnNavAdd;
+    this.btnNavAnalytics = btnNavAnalytics;
     this.btnNavBudget = btnNavBudget;
     this.btnNavCategory = btnNavCategory;
     this.btnNavHistory = btnNavHistory;
-    this.btnNavHome = btnNavHome;
     this.rvTransaction = rvTransaction;
     this.tvExpenses = tvExpenses;
     this.tvGreeting = tvGreeting;
@@ -137,6 +137,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnNavAnalytics;
+      LinearLayout btnNavAnalytics = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAnalytics == null) {
+        break missingId;
+      }
+
       id = R.id.btnNavBudget;
       LinearLayout btnNavBudget = ViewBindings.findChildViewById(rootView, id);
       if (btnNavBudget == null) {
@@ -152,12 +158,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.btnNavHistory;
       LinearLayout btnNavHistory = ViewBindings.findChildViewById(rootView, id);
       if (btnNavHistory == null) {
-        break missingId;
-      }
-
-      id = R.id.btnNavHome;
-      LinearLayout btnNavHome = ViewBindings.findChildViewById(rootView, id);
-      if (btnNavHome == null) {
         break missingId;
       }
 
@@ -210,7 +210,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, bottomNav, bottomNavContainer,
-          btnNavAdd, btnNavBudget, btnNavCategory, btnNavHistory, btnNavHome, rvTransaction,
+          btnNavAdd, btnNavAnalytics, btnNavBudget, btnNavCategory, btnNavHistory, rvTransaction,
           tvExpenses, tvGreeting, tvIncome, tvLogout, tvTotalBalance, tvUserName, tvViewAll);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -15,12 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp">
 
-        <ImageView
-            android:id="@+id/ivBack"
-            android:src="@android:drawable/ic_media_previous"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            app:tint="#BBF0AE" />
+
         <TextView
             android:text="Add Transaction"
             android:textSize="18sp"
@@ -31,9 +26,11 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
+    <!-- FIXED: Height changed to 0dp and layout_weight="1" added so it stops pushing everything down -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <LinearLayout
             android:orientation="vertical"
             android:padding="20dp"
@@ -96,7 +93,7 @@
             <Button android:id="@+id/btnPickImage"
                 android:text="📷  Choose Image"
                 android:backgroundTint="#E8F5E9" android:textColor="#1E442F"
-                android:textStyle="bold" android:layout_marginBottom="20dp"
+                android:textStyle="bold" android:layout_marginBottom="10dp"
                 android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
             <!-- Spinner shown while uploading image to Firebase Storage -->
@@ -109,8 +106,86 @@
                 android:text="Save Transaction"
                 android:backgroundTint="#1E442F" android:textColor="#BBF0AE"
                 android:textStyle="bold"
-                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- Bottom nav — exact same design as MainActivity -->
+    <!-- FIXED: Removed android:layout_gravity="bottom" (which is unused inside vertical LinearLayouts) and set bottom margin to 16dp for consistency -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#1E442F">
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/btnNavHome"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="🏠" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Home" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavCategory"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="🏷️" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Category" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavBudget"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📊" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Budget" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavHistory"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📋" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="History" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNavAnalytics"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📈" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Analytics" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

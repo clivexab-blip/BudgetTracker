@@ -4,11 +4,11 @@ package com.example.budgettracker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -22,7 +22,25 @@ public final class ActivityTransactionHistoryBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView ivBack;
+  public final LinearLayout bottomNav;
+
+  @NonNull
+  public final CardView bottomNavContainer;
+
+  @NonNull
+  public final LinearLayout btnNavAdd;
+
+  @NonNull
+  public final LinearLayout btnNavAnalytics;
+
+  @NonNull
+  public final LinearLayout btnNavBudget;
+
+  @NonNull
+  public final LinearLayout btnNavCategory;
+
+  @NonNull
+  public final LinearLayout btnNavHome;
 
   @NonNull
   public final RecyclerView rvTransaction;
@@ -31,10 +49,19 @@ public final class ActivityTransactionHistoryBinding implements ViewBinding {
   public final TextView tvTransactionCount;
 
   private ActivityTransactionHistoryBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageView ivBack, @NonNull RecyclerView rvTransaction,
+      @NonNull LinearLayout bottomNav, @NonNull CardView bottomNavContainer,
+      @NonNull LinearLayout btnNavAdd, @NonNull LinearLayout btnNavAnalytics,
+      @NonNull LinearLayout btnNavBudget, @NonNull LinearLayout btnNavCategory,
+      @NonNull LinearLayout btnNavHome, @NonNull RecyclerView rvTransaction,
       @NonNull TextView tvTransactionCount) {
     this.rootView = rootView;
-    this.ivBack = ivBack;
+    this.bottomNav = bottomNav;
+    this.bottomNavContainer = bottomNavContainer;
+    this.btnNavAdd = btnNavAdd;
+    this.btnNavAnalytics = btnNavAnalytics;
+    this.btnNavBudget = btnNavBudget;
+    this.btnNavCategory = btnNavCategory;
+    this.btnNavHome = btnNavHome;
     this.rvTransaction = rvTransaction;
     this.tvTransactionCount = tvTransactionCount;
   }
@@ -66,9 +93,45 @@ public final class ActivityTransactionHistoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.ivBack;
-      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
-      if (ivBack == null) {
+      id = R.id.bottomNav;
+      LinearLayout bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavContainer;
+      CardView bottomNavContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAdd;
+      LinearLayout btnNavAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAdd == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAnalytics;
+      LinearLayout btnNavAnalytics = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAnalytics == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavBudget;
+      LinearLayout btnNavBudget = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavBudget == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavCategory;
+      LinearLayout btnNavCategory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHome;
+      LinearLayout btnNavHome = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHome == null) {
         break missingId;
       }
 
@@ -84,8 +147,9 @@ public final class ActivityTransactionHistoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTransactionHistoryBinding((LinearLayout) rootView, ivBack, rvTransaction,
-          tvTransactionCount);
+      return new ActivityTransactionHistoryBinding((LinearLayout) rootView, bottomNav,
+          bottomNavContainer, btnNavAdd, btnNavAnalytics, btnNavBudget, btnNavCategory, btnNavHome,
+          rvTransaction, tvTransactionCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

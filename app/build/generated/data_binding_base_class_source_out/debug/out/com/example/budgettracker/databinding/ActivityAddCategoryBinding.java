@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.budgettracker.R;
@@ -22,21 +23,52 @@ public final class ActivityAddCategoryBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final LinearLayout bottomNav;
+
+  @NonNull
+  public final CardView bottomNavContainer;
+
+  @NonNull
+  public final LinearLayout btnNavAdd;
+
+  @NonNull
+  public final LinearLayout btnNavAnalytics;
+
+  @NonNull
+  public final LinearLayout btnNavBudget;
+
+  @NonNull
+  public final LinearLayout btnNavHistory;
+
+  @NonNull
+  public final LinearLayout btnNavHome;
+
+  @NonNull
   public final Button btnSaveCategory;
 
   @NonNull
   public final EditText etCategoryName;
 
   @NonNull
-  public final ImageView ivBack;
+  public final RecyclerView rvCategoriesDisplay;
 
   private ActivityAddCategoryBinding(@NonNull LinearLayout rootView,
-      @NonNull Button btnSaveCategory, @NonNull EditText etCategoryName,
-      @NonNull ImageView ivBack) {
+      @NonNull LinearLayout bottomNav, @NonNull CardView bottomNavContainer,
+      @NonNull LinearLayout btnNavAdd, @NonNull LinearLayout btnNavAnalytics,
+      @NonNull LinearLayout btnNavBudget, @NonNull LinearLayout btnNavHistory,
+      @NonNull LinearLayout btnNavHome, @NonNull Button btnSaveCategory,
+      @NonNull EditText etCategoryName, @NonNull RecyclerView rvCategoriesDisplay) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
+    this.bottomNavContainer = bottomNavContainer;
+    this.btnNavAdd = btnNavAdd;
+    this.btnNavAnalytics = btnNavAnalytics;
+    this.btnNavBudget = btnNavBudget;
+    this.btnNavHistory = btnNavHistory;
+    this.btnNavHome = btnNavHome;
     this.btnSaveCategory = btnSaveCategory;
     this.etCategoryName = etCategoryName;
-    this.ivBack = ivBack;
+    this.rvCategoriesDisplay = rvCategoriesDisplay;
   }
 
   @Override
@@ -66,6 +98,48 @@ public final class ActivityAddCategoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomNav;
+      LinearLayout bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavContainer;
+      CardView bottomNavContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAdd;
+      LinearLayout btnNavAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAdd == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAnalytics;
+      LinearLayout btnNavAnalytics = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAnalytics == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavBudget;
+      LinearLayout btnNavBudget = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavBudget == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHistory;
+      LinearLayout btnNavHistory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHome;
+      LinearLayout btnNavHome = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHome == null) {
+        break missingId;
+      }
+
       id = R.id.btnSaveCategory;
       Button btnSaveCategory = ViewBindings.findChildViewById(rootView, id);
       if (btnSaveCategory == null) {
@@ -78,14 +152,15 @@ public final class ActivityAddCategoryBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ivBack;
-      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
-      if (ivBack == null) {
+      id = R.id.rvCategoriesDisplay;
+      RecyclerView rvCategoriesDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (rvCategoriesDisplay == null) {
         break missingId;
       }
 
-      return new ActivityAddCategoryBinding((LinearLayout) rootView, btnSaveCategory,
-          etCategoryName, ivBack);
+      return new ActivityAddCategoryBinding((LinearLayout) rootView, bottomNav, bottomNavContainer,
+          btnNavAdd, btnNavAnalytics, btnNavBudget, btnNavHistory, btnNavHome, btnSaveCategory,
+          etCategoryName, rvCategoriesDisplay);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

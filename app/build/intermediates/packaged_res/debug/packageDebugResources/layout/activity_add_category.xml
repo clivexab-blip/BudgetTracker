@@ -5,38 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    android:fitsSystemWindows="true"> <LinearLayout
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:padding="15dp"
-    android:background="#1E442F"
-    android:layout_width="match_parent"
-    android:layout_height="60dp">
+    android:fitsSystemWindows="true">
 
-    <ImageView
-        android:id="@+id/ivBack"
-        android:src="@android:drawable/ic_media_previous"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:padding="4dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:tint="#BBF0AE" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:background="#1E442F"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
 
-    <TextView
-        android:text="Add Category"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#BBF0AE"
-        android:layout_marginStart="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <TextView
+            android:text="Add Category"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#BBF0AE"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
+    <!-- Content Area: Uses weight to make sure Bottom Nav remains anchored at the absolute bottom -->
     <LinearLayout
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <TextView
             android:text="Category Name"
@@ -63,8 +58,103 @@
             android:textColor="#BBF0AE"
             android:textStyle="bold"
             android:padding="12dp"
+            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            android:text="Existing Categories"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Added scroll container to let you see and manage your added items list on screen -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategoriesDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"/>
+
     </LinearLayout>
+
+    <!-- Bottom nav — exact same design as MainActivity (No IDs or views touched) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#1E442F">
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/btnNavHome"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="🏠" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Home" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavBudget"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📊" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Budget" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavAdd"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#BBF0AE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="➕" android:textSize="22sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Add" android:textStyle="bold" android:textColor="#1E442F" android:textSize="10sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavHistory"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📋" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="History" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnNavAnalytics"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView android:text="📈" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Analytics" android:textSize="10sp" android:textColor="#BBF0AE" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

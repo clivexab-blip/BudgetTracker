@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.budgettracker.R;
@@ -23,6 +23,27 @@ import java.lang.String;
 public final class ActivityBudgetBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
+
+  @NonNull
+  public final LinearLayout bottomNav;
+
+  @NonNull
+  public final CardView bottomNavContainer;
+
+  @NonNull
+  public final LinearLayout btnNavAdd;
+
+  @NonNull
+  public final LinearLayout btnNavAnalytics;
+
+  @NonNull
+  public final LinearLayout btnNavCategory;
+
+  @NonNull
+  public final LinearLayout btnNavHistory;
+
+  @NonNull
+  public final LinearLayout btnNavHome;
 
   @NonNull
   public final Button btnSaveBudget;
@@ -40,9 +61,6 @@ public final class ActivityBudgetBinding implements ViewBinding {
   public final EditText etMinGoal;
 
   @NonNull
-  public final ImageView ivBack;
-
-  @NonNull
   public final LinearLayout llCategoryBreakdown;
 
   @NonNull
@@ -57,19 +75,28 @@ public final class ActivityBudgetBinding implements ViewBinding {
   @NonNull
   public final TextView tvTotalSpent;
 
-  private ActivityBudgetBinding(@NonNull LinearLayout rootView, @NonNull Button btnSaveBudget,
-      @NonNull Button btnSaveGoals, @NonNull EditText etBudgetLimit, @NonNull EditText etMaxGoal,
-      @NonNull EditText etMinGoal, @NonNull ImageView ivBack,
+  private ActivityBudgetBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout bottomNav,
+      @NonNull CardView bottomNavContainer, @NonNull LinearLayout btnNavAdd,
+      @NonNull LinearLayout btnNavAnalytics, @NonNull LinearLayout btnNavCategory,
+      @NonNull LinearLayout btnNavHistory, @NonNull LinearLayout btnNavHome,
+      @NonNull Button btnSaveBudget, @NonNull Button btnSaveGoals, @NonNull EditText etBudgetLimit,
+      @NonNull EditText etMaxGoal, @NonNull EditText etMinGoal,
       @NonNull LinearLayout llCategoryBreakdown, @NonNull LinearProgressIndicator progressOverall,
       @NonNull Spinner spinnerBudgetCategory, @NonNull TextView tvGoalStatus,
       @NonNull TextView tvTotalSpent) {
     this.rootView = rootView;
+    this.bottomNav = bottomNav;
+    this.bottomNavContainer = bottomNavContainer;
+    this.btnNavAdd = btnNavAdd;
+    this.btnNavAnalytics = btnNavAnalytics;
+    this.btnNavCategory = btnNavCategory;
+    this.btnNavHistory = btnNavHistory;
+    this.btnNavHome = btnNavHome;
     this.btnSaveBudget = btnSaveBudget;
     this.btnSaveGoals = btnSaveGoals;
     this.etBudgetLimit = etBudgetLimit;
     this.etMaxGoal = etMaxGoal;
     this.etMinGoal = etMinGoal;
-    this.ivBack = ivBack;
     this.llCategoryBreakdown = llCategoryBreakdown;
     this.progressOverall = progressOverall;
     this.spinnerBudgetCategory = spinnerBudgetCategory;
@@ -104,6 +131,48 @@ public final class ActivityBudgetBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomNav;
+      LinearLayout bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavContainer;
+      CardView bottomNavContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAdd;
+      LinearLayout btnNavAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAdd == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavAnalytics;
+      LinearLayout btnNavAnalytics = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavAnalytics == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavCategory;
+      LinearLayout btnNavCategory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHistory;
+      LinearLayout btnNavHistory = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.btnNavHome;
+      LinearLayout btnNavHome = ViewBindings.findChildViewById(rootView, id);
+      if (btnNavHome == null) {
+        break missingId;
+      }
+
       id = R.id.btnSaveBudget;
       Button btnSaveBudget = ViewBindings.findChildViewById(rootView, id);
       if (btnSaveBudget == null) {
@@ -131,12 +200,6 @@ public final class ActivityBudgetBinding implements ViewBinding {
       id = R.id.etMinGoal;
       EditText etMinGoal = ViewBindings.findChildViewById(rootView, id);
       if (etMinGoal == null) {
-        break missingId;
-      }
-
-      id = R.id.ivBack;
-      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
-      if (ivBack == null) {
         break missingId;
       }
 
@@ -170,8 +233,9 @@ public final class ActivityBudgetBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityBudgetBinding((LinearLayout) rootView, btnSaveBudget, btnSaveGoals,
-          etBudgetLimit, etMaxGoal, etMinGoal, ivBack, llCategoryBreakdown, progressOverall,
+      return new ActivityBudgetBinding((LinearLayout) rootView, bottomNav, bottomNavContainer,
+          btnNavAdd, btnNavAnalytics, btnNavCategory, btnNavHistory, btnNavHome, btnSaveBudget,
+          btnSaveGoals, etBudgetLimit, etMaxGoal, etMinGoal, llCategoryBreakdown, progressOverall,
           spinnerBudgetCategory, tvGoalStatus, tvTotalSpent);
     }
     String missingId = rootView.getResources().getResourceName(id);
