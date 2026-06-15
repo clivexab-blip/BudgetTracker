@@ -6,16 +6,21 @@ https://youtu.be/F6c41kGFxFc?feature=shared
 ADDED IINOVATIVE FEATURES 3 of them
 1.PREDICT SPENDING INSIGHTS
 FEATURE: Helps users avoid overspending early
+
 IMPACT
 Help users avoid overspending early
 Enables proactive financial
+
 2.SMART SAVING RECOMMEBDATIONS
 FEATURE: Suggest daily spending allowance
+
 IMPACT
 Guide users to improve financially
 Turns data into actionable advice
+
 3.DAILY SPENDING LIMIT SUGGESTION
 FEATURES: Suggests daily spending allowance
+
 IMPACT
 Breaks budget into manageable targets
 Reduces risk of overspending
