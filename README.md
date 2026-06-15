@@ -4,6 +4,7 @@ LINK TO VIDEO
 https://youtu.be/F6c41kGFxFc?feature=shared
 
 ADDED IINOVATIVE FEATURES 3 of them
+
 1.PREDICT SPENDING INSIGHTS
 FEATURE: Helps users avoid overspending early
 
@@ -151,6 +152,8 @@ JSON
       "main_goal": "Save for a holiday"
     }
   },
+
+  
   "categories": {
     "{uid}": {
       "{catId}": {
@@ -161,6 +164,8 @@ JSON
       }
     }
   },
+
+  
   "transactions": {
     "{uid}": {
       "{transId}": {
@@ -179,6 +184,7 @@ JSON
     }
   }
 }
+
 Badge Reward System (gamification)
 
 🥉 Bronze Warning
